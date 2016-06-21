@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'writer/home'
   
+  map.connect 'notes/:url', :controller => 'notes', :action => 'show'
+  resources :notes
+  root 'notes#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

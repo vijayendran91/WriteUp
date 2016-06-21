@@ -1,0 +1,10 @@
+<h1>New Note </h1>
+
+<%= form_for @note do |f| %>
+    <%= f.label :url %>
+    <%= f.text_field :url%>
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+    <%= f.submit %>
+<%end%>
+
